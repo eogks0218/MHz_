@@ -1,0 +1,137 @@
+.CommunityName{
+    font-size: 1.3rem;
+    font-family: 'Paperlogy-5Medium';
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    opacity: 0;
+    transform: rotateY(360deg);
+    transition: all 1.5s ease-in-out;
+    transition-delay: .5;
+    &.in-view{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+.Community_upper_hr{
+    width: 80%;
+    height: 0;
+    margin: 25px auto;
+    border-bottom: 5px solid #C73659;
+}
+.CommunityBox{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .CommunityList{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+.Community_center_hr{
+    width: 80%;
+    height: 0;
+    margin: 25px auto;
+    border-bottom: 5px dashed #C73659;
+}
+.WomanCafeBox{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .WomanCafeList{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+.EtcCommunityBox{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .EtcCommunityList{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px){
+    .Community_upper_hr{
+        margin: 15px auto;
+    }
+    .CommunityBox{
+        width: 90%;
+        h3{
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+    }
+    .CommunityName{
+        font-size: 0.75rem;
+        padding: 9px;
+    }
+    .Community_center_hr{
+        margin: 15px auto;
+    }
+    .WomanCafeBox{
+        width: 90%;
+        h3{
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+    }
+    .EtcCommunityBox{
+        width: 90%;
+        h3{
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+    }
+}

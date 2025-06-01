@@ -1,0 +1,203 @@
+.SuccessReference-title{
+    font-family: 'Paperlogy-2ExtraLight';
+    width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 1.5px;
+    h1{
+        font-size: 2.8rem;
+        letter-spacing: 1.3px;
+        font-family: 'Paperlogy-5Medium';
+        margin-bottom: 50px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        transition-delay: .3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    h3{
+        font-size: 1.9rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        transition-delay: .3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    h5{
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out;
+        transition-delay: .3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+.SuccessReference-carousel{
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .SuccessReference-mobile{
+        position: absolute;
+        width: 300px;
+        height: 700px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-47%) translateY(-50%);
+        background-image: url(../../../public/images/phone2.png);
+        background-size: cover;
+        background-position: center;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+    .Performance-card {
+        margin: 0 15px;
+        z-index: 1;
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &.inactive .Performance-card-image {
+            filter: brightness(50%); // 어둡게 처리
+            transform: scale(0.8); // 이미지 크기를 줄임
+        }
+
+        &.active .Performance-card-image {
+            transform: scale(1); // 이미지 크기를 조금 키움
+            filter: brightness(100%); // 밝게 유지
+        }
+
+        .Performance-card-image {
+            margin: 10px auto;
+            width: 1500px;
+            height: 600px;
+            background-size: 100% 100%;
+            background-position: center;
+            border-radius: 10px;
+            max-width: 1100px;
+            transition: all 1s ease-in-out;
+            // margin-right: ?200px;
+        }
+    }
+    button{
+        z-index: 5;
+    }
+    .slick-prev::before, .slick-next::before{
+        color: #FFF;
+        font-size: 70px;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        transition: all 0.5s ease;
+    }
+    .slick-prev::before{
+        left: 350px;
+    }
+    .slick-next::before{
+        right: 350px;
+    }
+}
+.SuccessReference-tab{
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 70px auto;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(100px);
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .SuccessReference-tab-item{
+        font-family: 'Paperlogy-6SemiBold';
+        font-size: 1.7rem;
+        border-radius: 32px;
+        border: 2px solid #FFF;
+        padding: 10px 30px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        &.currentTab{
+            background-color: #C73659;
+            border: none;
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .SuccessReference-title{
+        h1{
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        h3{
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        h5{
+            font-size: 1rem;
+        }
+    }
+    .SuccessReference-tab{
+        gap: 10px;
+        margin: 20px auto;
+        margin-bottom: 0;
+        .SuccessReference-tab-item{
+            font-size: 1.1rem;
+            padding: 5px 15px;
+        }
+    }
+    .SuccessReference-carousel{
+        margin: 30px auto;
+        margin-bottom: 0;
+        width: 80%;
+        .slick-next::before{
+            font-size: 30px;
+            right: 0px;
+        }
+        .slick-prev::before{
+            font-size: 30px;
+            left: 0px;
+        }
+        .Performance-card{
+            .Performance-card-image{
+                width: 700px;
+                height: auto;
+                transform: translateX(-515px) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.CV-content-why{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151515;
+    color: #FFF;
+    font-family: 'Paperlogy-2ExtraLight';
+    h3{
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 2px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        span{
+            font-family: 'GangwonEduSaeeum_OTFMediumA';
+            font-size: 3.3rem;
+            letter-spacing: 5px;
+        }
+    }
+    h1{
+        position: relative;
+        font-size: 3.7rem;
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        .underlineimg{
+            position: absolute;
+            background-image: url(../../../public/images/underlineimg.png);
+            background-size: cover;
+            background-position: center;
+            width: 70%;
+            height: 30%;
+            bottom: 10%;
+            left: 22%;
+            z-index: 0;
+            transform: rotate(2deg);
+
+        }
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        span{
+            font-family: 'GangwonEduSaeeum_OTFMediumA';
+            font-size: 5.8rem;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    h2{
+        font-family: 'Paperlogy-3Light';
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 1.7px;
+        text-decoration: underline;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        span{
+            color: #C73659;
+            text-decoration-color: #C73659;
+            text-decoration: underline;
+        }
+    }
+    h5{
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #CCC;
+        line-height: 1.3;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    h4{
+        font-family: 'Paperlogy-4Regular';
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+        opacity: 0;
+        transition-delay: .3s;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+        transition-delay: .7s;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .CV-content-why{
+        h3{
+            font-size: 1.4rem;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        h1{
+            font-size: 1.3rem;
+            span{
+                font-size: 2.4rem;
+            }
+        }
+        h2{
+            font-size: 1.6rem;
+        }
+        h5{
+            font-size: 0.85rem;
+        }
+        h4{
+            font-size: 1.9rem;
+        }
+    }
+}

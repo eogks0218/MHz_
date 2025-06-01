@@ -1,0 +1,144 @@
+.ServiceNCH-Process-container{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Paperlogy-3Light';
+    h1{
+        width: 20%;
+        text-align: center;
+        max-width: 1300px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-size: 3rem;
+        font-family: 'Paperlogy-6SemiBold';
+        letter-spacing: 1.5px;
+        border-bottom: 10px solid #007aff;
+        padding-bottom: 10px;
+        transition: all 1.5s ease-in-out;
+        opacity: 0;
+        transform: translateX(100px);
+        transition-delay: .3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    >p{
+        width: 80%;
+        max-width: 1300px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        font-family: 'Paperlogy-4Regular';
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 1s ease-in-out;
+        transition-delay: .3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .ServiceNCH-Process-description{
+        width: 80%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        .ServiceNCH-Process-description-card{
+            width: 25%;
+            max-width: 330px;
+            height: 400px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s ease-in-out;
+            transition-delay: .3s;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            h3{
+                font-size: 1.3rem;
+                font-family: 'Paperlogy-4Regular';
+            }
+            >p{
+                font-size: 1.1rem;
+            }
+            .ServiceNCH-Process-description-card-image{
+                background-size: cover;
+                background-position: center;
+                height: 220px;
+                border-radius: 10px;
+            }
+            &:nth-child(1){
+                .ServiceNCH-Process-description-card-image{
+                    background-image: url(../../../public/images/process-product.jpg);
+                }
+            }
+            &:nth-child(2){
+                transition-delay: .5s;
+                .ServiceNCH-Process-description-card-image{
+                    background-image: url(../../../public/images/process-five.jpg);
+                }
+            }
+            &:nth-child(3){
+                transition-delay: 1s;
+                .ServiceNCH-Process-description-card-image{
+                    background-image: url(../../../public/images/process-two.jpg);
+                }
+            }
+            &:nth-child(4){
+                transition-delay: 1.5s;
+                .ServiceNCH-Process-description-card-image{
+                    background-image: url(../../../public/images/process-six.jpg);
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 768px){
+    .ServiceNCH-Process-container{
+        padding: 30px 0;
+        padding-bottom: 50px;
+        h1{
+            width: 45%;
+            font-size: 1.8rem;
+            padding-bottom: 3px;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #007aff;
+        }
+        p{
+            width: 90%;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .ServiceNCH-Process-description{
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            .ServiceNCH-Process-description-card{
+                width: 100%;
+                height: 200px;
+                gap: 10px;
+                h3{
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: .9rem;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+/* PortPolioList.scss */
+.PortPolioList-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translateY(50px);
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.PortPolioList-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 50px; /* 이미지 간 간격을 조정 */
+    justify-content: center; /* 이미지를 중앙에 정렬 */
+    width: 1200px; /* 한 줄에 3개씩 배치될 수 있도록 가로 너비 설정 */
+    margin-bottom: 75px;
+}
+
+.PortPolioList-image-item {
+    width: 300px;
+    height: 630px;
+    border-radius: 35px;
+    position: relative;
+}
+
+.PortPolioList-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+    z-index: 1;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    li::marker {
+        content: "";
+    }
+
+    svg {
+        font-size: 1.5rem;
+        padding-top: 5px;
+    }
+}
+
+/* 페이지 번호 스타일 */
+.pagination__link {
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: #007aff;
+        color: white;
+    }
+}
+
+/* 활성 페이지 번호 스타일 */
+.pagination__link__active {
+    background-color: #007aff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/* 비활성화된 페이지 번호 스타일 */
+.pagination__link--disabled {
+    color: #999;
+    cursor: not-allowed !important;
+}
+
+.next, .previous{
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .PortPolioList-container{
+        width: 100%;
+        padding: 5px;
+        .PortPolioList-images{
+            width: 100%;
+            gap: 0 10px;
+            margin-bottom: 30px;
+            .PortPolioList-image-item{
+                width: 190px;
+                height: 400px;
+                img{
+                    height: 110%;
+                }
+            }
+        }
+    }
+}

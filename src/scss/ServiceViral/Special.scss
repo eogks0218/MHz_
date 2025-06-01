@@ -1,0 +1,104 @@
+.CV-Special-container{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+    .CV-Special-description{
+        min-width: 550px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 3.3rem;
+            text-align: left;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            opacity: 0;
+            transition-delay: .3s;
+            transform: translateX(-100px);
+            transition: all 1s ease-in-out;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        p{
+            font-family: 'Paperlogy-4Regular';
+            font-size: 1.5rem;
+            text-align: left;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            opacity: 0;
+            transition-delay: .3s;
+            transform: translateX(-100px);
+            transition: all 1s ease-in-out;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        h3{
+            font-family: 'Paperlogy-4Regular';
+            font-size: 1.9rem;
+            text-align: left;
+            line-height: 1.3;
+            opacity: 0;
+            transition-delay: .3s;
+            transform: translateX(-100px);
+            transition: all 1s ease-in-out;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+    .CV-Special-image{
+        width: 480px;
+        height: 550px;
+        background-image: url(../../../public/images/viral-two2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50px;
+        opacity: 0;
+        transition-delay: .3s;
+        transform: translateX(100px);
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .CV-Special-container {
+        gap: 10px;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        .CV-Special-description{
+            min-width: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            h3{
+                font-size: 1.3rem;
+            }
+        }
+        .CV-Special-image{
+            width: 330px;
+            height: 300px;
+        }
+    }
+}

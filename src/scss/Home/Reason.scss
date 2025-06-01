@@ -1,0 +1,128 @@
+.Reason-one{
+    font-family: 'Paperlogy-1Thin';
+    width: 60%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    h1{
+        font-size: 2.5rem;
+        color: #000;
+        margin-bottom: 70px;
+        line-height: 1.3;
+        letter-spacing: 3px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        text-align: center;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        strong{
+            font-family: 'Paperlogy-8ExtraBold';
+        }
+        span{
+            color: #C73659;
+            font-family: 'Paperlogy-5Medium';
+            letter-spacing: 3px;
+        }
+    }
+    .Reason-one-description{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        color: #000;
+        &.in-view{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .Reason-one-description-box{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: start;
+            border-top: 5px solid #777777;
+            padding: 30px 20px;
+            h2{
+                font-size: 1.3rem;
+                font-family: 'Paperlogy-3Light';
+                &:first-child{
+                    width: 10%;
+                }
+                &:nth-child(2){
+                    width: 30%;
+                    letter-spacing: 1.5px;
+                    margin-right: 20px;
+                }
+            }
+            h5{
+                width: 60%;
+                font-size: 1.1rem;
+                font-family: 'Paperlogy-1Thin';
+                letter-spacing: 1px;
+                line-height: 1.5;
+                color: #000;
+            }
+        }
+    }
+    h4{
+        font-size: 1.3rem;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        color: #000;
+        padding-left: 50px;
+        opacity: 0;
+        transform: translateX(100px);
+        transition-delay: .3s;
+        transition: all 1s ease-in-out;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        span{
+            font-family: 'Paperlogy-8ExtraBold';
+            letter-spacing: 1.5px;
+            color: #000;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .Reason-one{
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .Reason-one h1{
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px;
+    }
+    .Reason-one .Reason-one-description{
+        width: 100%;
+    }
+    .Reason-one .Reason-one-description .Reason-one-description-box{
+        padding: 10px;
+        height: auto;
+        h2{
+            font-size: 0.7rem;
+        }
+        h5{
+            font-size: 0.6rem;
+            letter-spacing: 0.4px;
+        }
+    }
+    .Reason-one h4{
+        padding-left: 0;
+        margin-top: 10px;
+        font-size: 0.75rem;
+    }
+}

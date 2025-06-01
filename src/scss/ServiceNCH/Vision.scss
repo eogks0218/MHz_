@@ -1,0 +1,84 @@
+.Vision-container{
+    width: 100%;
+    padding: 100px ;
+    // background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 40px solid #000;
+}
+
+.Vision-card {
+    font-family: 'Paperlogy-6SemiBold';
+    width: 55%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+    position: relative;
+    
+    &:last-child{
+        .Vision-card-description{
+            font-family: 'Paperlogy-7Bold';
+            font-size: 2.2rem !important;
+            text-decoration: underline 10px #007aff;
+        }
+    }
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.5s ease-in-out;
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Vision-card-description {
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    line-height: 1.6;
+    padding: 10px;
+    position: relative;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+@media (max-width: 768px){
+    .Vision-container{
+        border-top: 20px solid #000;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .Vision-card{
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+        &:last-child{
+            .Vision-card-description{
+                font-size: 1.5rem !important;
+                text-decoration: underline 5px #007aff;
+            }
+        }
+    }
+    .Vision-card-description{
+        font-size: .8rem;
+    }
+}

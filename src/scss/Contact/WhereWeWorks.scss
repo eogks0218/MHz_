@@ -1,0 +1,91 @@
+.WWW-container{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    margin-bottom: 70px;
+    .WWW-map{
+        width: 50%;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 1s ease-in-out;
+        transition-delay: 0.3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            border-radius: 22px 5px 5px 22px;
+        }
+    }
+    .WWW-content{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #151515;
+        color: #FFF;
+        padding: 20px;
+        padding-top: 80px;
+        border-radius: 5px 22px 22px 5px;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1s ease-in-out;
+        transition-delay: 0.3s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        h1{
+            width: 70%;
+            max-width: 600px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            color: #FFF;
+            font-family: 'Paperlogy-7Bold';
+        }
+        h3{
+            width: 70%;
+            max-width: 600px;
+            font-size: 1.4rem;
+            margin-bottom: 100px;
+            letter-spacing: 1px;
+            color: #FFF;
+            font-family: 'Paperlogy-4Regular';
+        }
+        p{
+            width: 70%;
+            max-width: 600px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #CCC;
+            font-family: 'Paperlogy-4Regular';
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .WWW-container{
+        width: 90%;
+        height: 300px;
+        margin-bottom: 35px;
+        .WWW-content{
+            padding: 60px 0 0 0;
+            h1{
+                font-size: .9rem;
+                margin-bottom: 15px;
+            }
+            h3{
+                font-size: .9rem;
+                margin-bottom: 90px;
+            }
+            p{
+                font-size: .6rem;
+            }
+        }
+    }
+}

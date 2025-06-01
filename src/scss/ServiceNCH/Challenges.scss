@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'KCC-eunyoung';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ServiceNCH-Challenges-container{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151515;
+    color: #FFF;
+    font-family: 'Paperlogy-2ExtraLight';
+    h1 {
+        width: 1000px;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        position: relative;
+        .ServiceNCH-underlineimg{
+            position: absolute;
+            height: 20%;
+            background-image: url(../../../public/images/underlineimg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            bottom: 0;
+            right: -13%;
+            transform: rotate(-4deg);
+            // width: 0;
+            transition: all 2s ease-in-out;
+            transition-delay: 1s;
+            width: 60%;
+            opacity: 0;
+            // animation: ChallengesSlideIn 2s ease-in-out;
+            &.in-view{
+                opacity: 1;
+            }
+        }
+        .left-align {
+            display: block; /* 줄바꿈을 위해 block 설정 */
+            text-align: left;
+            opacity: 0;
+            transition-delay: .3s;
+            transform: translateX(200px);
+            transition: all 1.5s ease-in-out;            
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            span{
+                color: #007aff;
+                font-family: 'KCC-eunyoung';
+                font-size: 5.5rem;
+                margin-right: 10px;
+            }
+        }
+        .right-align {
+            display: block;
+            text-align: right;
+            opacity: 0;
+            transition-delay: .3s;
+            transform: translateX(-200px);
+            transition: all 1.5s ease-in-out;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            span{
+                font-family: 'KCC-eunyoung';
+                font-size: 5rem;
+            };
+        }
+    }
+    h4{
+        width: 50%;
+        max-width: 1000px;
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        margin: 30px 0;
+        line-height: 1.5;
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 1s ease-in-out;
+        transition-delay: 1s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        span{
+            color: #999;
+            margin-right: 20px;
+        }
+    }
+    p{
+        width: 50%;
+        max-width: 1000px;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+        line-height: 1.2;
+        padding-left: 55px;
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 1s ease-in-out;
+        transition-delay: 1.5s;
+        &.in-view{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .ServiceNCH-Challenges-container{
+        padding: 40px 0;
+        h1{
+            width: 90%;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            .ServiceNCH-underlineimg{
+                width: 90%;
+            }
+            span{
+                span{
+                    font-size: 3rem !important;
+                }
+            }
+        }
+        h4{
+            width: 90%;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        p{
+            width: 90%;
+            padding-left: 0;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+    }
+}

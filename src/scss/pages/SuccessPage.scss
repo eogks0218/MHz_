@@ -1,0 +1,167 @@
+.SuccessViral-container{
+    font-family: 'Paperlogy-2ExtraLight';
+    width: 100%;
+    .SuccessViral-title{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh;
+        color: #EEEEEE;
+        position: relative;
+        background-image: url(../../../public/images/success-back-1.jpg);
+        background-size: cover;
+        background-position: center;
+        gap: 50px;
+        .SuccessViral-title-bg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        h3{
+            width: 70%;
+            line-height: 1.5;
+            font-size: 1.7rem;
+            letter-spacing: 1.5px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s ease-in-out;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            span{
+                font-family: 'Paperlogy-6SemiBold';
+                color: #C73659;
+                font-weight: 600;
+            }
+        }
+        h1{
+            width: 70%;
+            font-size: 2.7rem;
+            letter-spacing: 1.5px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s ease-in-out;
+            transition-delay: .7s;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            span{
+                font-family: 'Paperlogy-6SemiBold';
+                margin-right: 30px;
+                font-size: 3.3rem;
+            }
+        }
+        h2{
+            width: 70%;
+            font-size: 1.9rem;
+            letter-spacing: 1.3px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s ease-in-out;
+            transition-delay: 1.4s;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        p{
+            width: 70%;
+            line-height: 1.5;
+            font-size: 1.4rem;
+            z-index: 2;
+            font-family: 'Paperlogy-3Light';
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s ease-in-out;
+            transition-delay: 2.1s;
+            &.in-view{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            span{
+                color: #C73659;
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+        }
+    }
+    .SuccessContent-one{
+        width: 100%;
+        background-image: url(../../../public/images/white_back.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .SuccessContent-two{
+        width: 100%;
+        padding: 100px 0;
+        background-color: #FFF;
+    }
+    .SuccessContent-three{
+        width: 100%;
+        padding: 100px 0;
+        background-color: #151515;
+    }
+}
+
+
+@media (max-width: 768px){
+    .SuccessViral-container{
+        .SuccessViral-title{
+            gap: 20px;
+            background-size: 100% 100%;
+            h3{
+                width: 90%;
+                font-size: 1rem;
+            }
+            h1{
+                width: 90%;
+                font-size: 1.5rem;
+                span{
+                    font-size: 2.3rem;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+            h2{
+                width: 90%;
+                font-size: 1.3rem;
+            }
+            P{
+                width: 90%;
+                font-size: .9rem;
+                span{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .SuccessContent-one{
+            padding: 30px 0;
+        }
+        .SuccessContent-two{
+            padding: 30px 0;
+        }
+    }
+    .SuccessViral-container{
+        .SuccessContent-three{
+            padding: 50px 0;
+            padding-bottom: 0;
+        }
+    }
+}

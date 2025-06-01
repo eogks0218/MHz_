@@ -1,0 +1,123 @@
+.SuccessOne-title{
+    font-family: 'Paperlogy-6SemiBold';
+    font-size: 1.9rem;
+    line-height: 2;
+    width: 60%;
+    margin: 0 auto;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-align: center;
+    span{
+        font-family: 'Paperlogy-8ExtraBold';
+        font-size: 2rem;
+        border-bottom: 7px solid #C73659;
+    }
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-in-out;
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.SuccessOne-main{
+    width: 60%;
+    height: 600px;
+    margin: 50px auto;
+    opacity: 0;
+    transition-delay: .3s;
+    transition: all 1s ease-in-out;
+    &.in-view{
+        opacity: 1;
+    }
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 32px;
+    }
+}
+
+.SuccessOne-description{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+    transition-delay: .3s;
+    &.in-view{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .SuccessOne-description-content{
+        width: 25%;
+        text-align: center;
+        border-right: 3px solid powderblue;
+        &:last-child{
+            border-right: none;
+        }
+        h3{
+            font-family: 'Paperlogy-6SemiBold';
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+            span{
+                font-family: 'Paperlogy-8ExtraBold';
+            }
+        }
+        h2{
+            font-size: 1.7rem;
+            font-family: 'Paperlogy-6SemiBold';
+            span{
+                font-size: 2rem;
+                margin-right: 5px;
+                letter-spacing: 1.3px;
+                font-family: 'Paperlogy-8ExtraBold';
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .SuccessOne-title{
+        width: 90%;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        span{
+            font-size: 1.6rem;
+            border-bottom: 3px solid #C73659;
+            line-height: 1.3;
+        }
+    }
+    .SuccessOne-main{
+        width: 90%;
+        height: 200px;
+        margin: 20px auto;
+    }
+    .SuccessOne-description{
+        width: 100%;
+        .SuccessOne-description-content{
+            &:last-child{
+                h3{
+                    font-size: .6rem;
+                }
+            }
+            h3{
+                font-size: .7rem;
+                margin-bottom: 10px;
+            }
+            h2{
+                font-size: .8rem;
+                span{
+                    font-size: .9rem;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}

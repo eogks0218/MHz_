@@ -1,0 +1,92 @@
+.FooterMenu-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #333;
+    font-family: 'Paperlogy-8ExtraBold';
+    display: flex;
+    color: #F1F1F1;
+    h1 {
+        width: 25%;
+        font-size: 2.5rem;
+        text-align: right;
+        padding-right: 5%;
+    }
+    > ul {
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0;
+        padding-top: 10px;
+        font-size: 1rem;
+        > li {
+            display: flex;
+            flex-direction: column;
+            height: min-content;
+            width: 300px;
+            font-family: 'Paperlogy-6SemiBold';
+            font-size: 1.3rem;
+            > ul {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                list-style: none;
+                > li {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+                    font-size: 1rem;
+                    font-family: 'Paperlogy-4Regular';
+                    >a{
+                        color: #F1F1F1 !important;
+                        text-decoration: none;
+                    }
+                    &.active{
+                        a{
+                            color: #C73659 !important;
+                        }
+                    }
+                }
+            }
+            a {
+                color: #F1F1F1;
+                text-decoration: none;
+            }
+
+            &.active { 
+                border-left: 5px solid #C73659; /* 좌측에 border 추가 */
+                padding-left: 20px;
+                a{
+                    color: #C73659; /* active state color */
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .FooterMenu-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .FooterMenu-container h1{
+        font-size: 1.3rem;
+    }
+    .FooterMenu-container > ul > li{
+        width: 150px;
+        font-size: 0.8rem;
+    }
+    .FooterMenu-container > ul > li > ul{
+        margin-top: 10px;
+    }
+    .FooterMenu-container > ul > li > ul > li{
+        margin: 5px 0;
+        font-size: 0.65rem;
+    }
+    .FooterMenu-container > ul{
+        gap: 10px;
+    }
+}

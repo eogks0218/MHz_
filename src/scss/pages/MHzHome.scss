@@ -1,0 +1,329 @@
+/* Main Container */
+.MHzHome-container {
+    font-family: "Paperlogy-8ExtraBold", "GmarketSansMedium";
+    /* Keyframes */
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+    @keyframes blink {
+        from, to {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    /* General Button */
+    .down-btn {
+        position: absolute;
+        bottom: 3%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        animation: bounce 2s infinite;
+        svg {
+            font-size: 40px;
+        }
+    }
+    /* Header */
+    .MHzHome-Header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        position: relative;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .down-btn {
+            color: #7695FF;
+        }
+        .HomeHeader-container{
+            margin: 0 auto;
+            backdrop-filter: blur(2px);
+            padding: 50px;
+            padding-bottom: 150px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            transition-delay: .3s;
+            border-radius: 33px;
+            &.in-view{
+                opacity: 1;
+            }
+        }
+        .QCMBox{
+            width: 550px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #000;
+            text-align: right;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 10px double #000;
+            h1{
+                width: 100%;
+                min-width: 430px;
+                margin: 10px auto;
+                display: flex;
+                justify-content: space-between;
+                &.QCMQ{
+                    justify-content: flex-end;
+                }
+                p{
+                    font-size: inherit;
+                    z-index: 2;
+                }
+            }
+            .underlineBox{
+                position: absolute;
+                bottom: 35px;
+                right: 0;
+                width: 0;
+                height: 20px;
+                background-color: #C73659;
+                z-index: 1;
+                transition: all 2s linear;
+                &.in-view{
+                    width: 150px;
+                }
+            }
+        }
+        .blinkingP{
+            font-size: 40px;
+            font-weight: bold;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            #blinking-cursor {
+                width: 2px;
+                height: 40px;
+                background-color: #000;
+                margin-left: 8px;
+                animation: blink .7s step-end infinite;
+            }
+        }
+    }
+    /* Content One */
+    .MHzHome-Content-One {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 1s linear;
+        position: relative;
+        background-image: url(../../../public/images/white_back.jpg);
+        background-size: cover;
+        background-position: center;
+        .CVImg{
+            background-size: cover;
+            background-position: center;
+            width: 60px;
+            height: 60px;
+            padding: 25px;
+            margin: 0 40px 0 30px;
+        }
+        #SynergyImg{
+            background-image: url(../../../public/images/free-icon-growth-1260895.png);
+        }
+        #OptimizeImg{
+            background-image: url(../../../public/images/free-icon-growth-3281323.png);
+        }
+        #InnovateImg{
+            background-image: url(../../../public/images/free-icon-solution-4730952.png);
+        }
+        #ExemplaryImg{
+            background-image: url(../../../public/images/free-icon-premium-quality-3908420.png);
+        }
+        svg {
+            color: #7695FF;
+            font-size: 2.2rem;
+            margin: 0 40px 0 30px;
+        }
+        .down-btn {
+            color: #7695FF;
+            animation: bounce .5s linear;
+            left: 50%;
+            svg {
+                font-size: 40px;
+                margin: 0;
+            }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #000;
+            text-align: center;
+            width: 70%;
+            position: relative;
+            opacity: 0;
+            transition: all 1s linear;
+            transition-delay: .3s;
+            margin-bottom: 50px;
+            &::after {
+                content: "";
+                width: 120px;
+                height: 7px;
+                background-color: #C73659;
+                position: absolute;
+                bottom: -20px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            &.in-view{
+                opacity: 1;
+            }
+        }
+        h5 {
+            font-family: "Paperlogy-6SemiBold";
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            color: #333;
+            opacity: 0;
+            transform: translateY(50px);
+            transition-delay: .3s;
+            transition: all 1s linear;
+            letter-spacing: 1.5px;
+            &.in-view{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        ul {
+            font-size: .8rem;
+            color: #333;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 50px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin-bottom: 20px;
+                width: 1000px;
+                padding: 30px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                background-color: #FFF;
+                opacity: 0;
+                transform: translateY(100px);
+                transition-delay: .3s;
+                transition: all 1s linear;
+                &.in-view{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        div {
+            text-align: left;
+            p {
+                font-family: "Paperlogy-6SemiBold";
+                font-size: 1.3rem;
+            }
+            h4 {
+                font-size: 1.7rem;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 3px solid #C73659;
+                width: 800px;
+            }
+        }
+    }
+    .MHzHome-Content-Two{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .MHzHome-Content-Three{
+        width: 100%;
+        // background-color: #151515;
+        background-image: url(../../../public/images/white_back.jpg);
+        background-size: cover;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .MHzHome-Content-Four{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .MHzHome-container .MHzHome-Header .QCMBox{
+        width: 100%;
+        h1{
+            width: 100%;
+            min-width: 250px;
+            margin: 10px auto;
+            font-size: 1.5rem;
+            p{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .MHzHome-container .MHzHome-Header .blinkingP{
+        font-size: 20px;
+    }
+    .MHzHome-container .MHzHome-Content-One h1{
+        font-size: 2.5rem;
+    }
+    .MHzHome-container .MHzHome-Content-One h5{
+        font-size: 1rem;
+        padding: 20px;
+    }
+    .MHzHome-container .MHzHome-Content-One ul li{
+        width: 90%;
+        flex-direction: column;
+    }
+    .MHzHome-container .MHzHome-Content-One .CVImg{
+        width: 100PX;
+        height: 100PX;
+    }
+    .MHzHome-container .MHzHome-Content-One div h4{
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 100%;
+    }
+    .MHzHome-container .MHzHome-Content-One div p{
+        font-size: 1rem;
+    }
+    .MHzHome-container .MHzHome-Content-One div{
+        width: 80%;
+        text-align: left;
+    }
+    .MHzHome-container .MHzHome-Content-One ul{
+        width: 95%;
+    }
+}

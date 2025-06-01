@@ -1,0 +1,16 @@
+.footer-box{
+    font-family: 'Paperlogy-7Bold';
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 40px;
+    background-image: url(../../../public/images/white_back.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.3px;
+}
