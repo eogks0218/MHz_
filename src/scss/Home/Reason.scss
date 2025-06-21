@@ -126,3 +126,40 @@
         font-size: 0.75rem;
     }
 }
+
+@media (max-width: 480px) {
+    .Reason-one {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .Reason-one h1 {
+        font-size: .9rem;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .Reason-one .Reason-one-description {
+        width: 100%;
+    }
+
+    .Reason-one .Reason-one-description .Reason-one-description-box {
+        padding: 8px;
+        height: auto;
+
+        h2 {
+            font-size: 0.6rem;
+        }
+
+        h5 {
+            font-size: 0.4rem;
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .Reason-one h4 {
+        padding-left: 0;
+        margin-top: 8px;
+        font-size: 0.65rem;
+    }
+}

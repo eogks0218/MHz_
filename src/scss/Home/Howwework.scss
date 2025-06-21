@@ -357,3 +357,89 @@
         padding-bottom: 50px;
     }
 }
+
+@media (max-width: 480px) {
+    .HWW-container .HWW-one h1 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .HWW-container .HWW-one h3 {
+        font-size: 0.6rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .HWW-container .HWW-one .HWW-one-description {
+        margin: 15px auto;
+    }
+
+    .HWW-container .HWW-one .HWW-one-description .HWW-one-description-box h5 {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    .HWW-container .HWW-one .HWW-one-description .HWW-one-description-box h2 {
+        font-size: 1.1rem;
+    }
+
+    .HWW-container .HWW-one {
+        margin-bottom: 30px;
+    }
+
+    .HWW-container .HWW-two h1 {
+        font-size: 1rem;
+    }
+
+    .HWW-container .HWW-two {
+        margin-bottom: 20px;
+    }
+
+    .HWW-container .HWW-two .HWW-two-description {
+        min-width: unset;
+        width: 100%;
+        gap: 8px;
+        margin-bottom: 0;
+    }
+
+    .HWW-container .HWW-two .HWW-two-description .HWW-two-description-box .HWW-two-description-img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .HWW-container .HWW-two .HWW-two-description .HWW-two-description-box .HWW-two-description-content h2 {
+        font-size: 0.7rem;
+    }
+
+    .HWW-container .HWW-two .HWW-two-description .HWW-two-description-box .HWW-two-description-content h5 {
+        font-size: 0.5rem;
+    }
+
+    .HWW-container .HWW-three h1 {
+        font-size: 0.9rem;
+    }
+
+    .HWW-container .HWW-three h2 {
+        font-size: 0.8rem;
+    }
+
+    .HWW-container .HWW-three h5 {
+        width: 95%;
+        font-size: 0.6rem;
+        margin-bottom: 20px;
+    }
+
+    .HWW-container .HWW-three .HWW-three-description {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .HWW-container .HWW-three .HWW-three-description .HWW-three-description-img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .MHzHome-container .MHzHome-Content-Two {
+        padding-bottom: 40px;
+    }
+}
